@@ -18,13 +18,28 @@ class Page1 extends StatelessWidget{
               SizedBox(
               child: Column(
                 children: [
-              ElevatedButton(onPressed: (){}, child: Text("Red"),),
-              ElevatedButton(onPressed: (){}, child: Text("Blue")),
-              ElevatedButton(onPressed: (){}, child: Text("Green")),])
+              ElevatedButton(onPressed: (){}, child: Text("Red"),
+              style: ElevatedButton.styleFrom(
+                backgroundColor: Colors.redAccent
+              ),),
+              ElevatedButton(onPressed: (){}, child: Text("Blue"),
+              style: ElevatedButton.styleFrom(
+                backgroundColor: Colors.blueAccent
+              ),),
+              ElevatedButton(onPressed: (){}, child: Text("Green"),
+              style: ElevatedButton.styleFrom(
+                backgroundColor: Colors.greenAccent
+              ),)
+              ])
               ),
-              ElevatedButton(onPressed: (){}, child: Text("Next")),
-          
-          
+              ElevatedButton(onPressed: (){}, child: Text("Next",
+              style: TextStyle(
+                color: Colors.white
+              ),),
+              style: ElevatedButton.styleFrom(
+                backgroundColor: const Color.fromARGB(255, 198, 226, 15),
+                shape: CircleBorder()
+              ),),
             ],
           ),
         ),
