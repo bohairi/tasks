@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_all_applications/quis_app/answer_model_quis.dart';
+import 'package:flutter_all_applications/six/answer_model.dart';
 
 // class CustomButtonClass extends StatelessWidget{
 //    Map<String,dynamic> color;
@@ -9,14 +11,20 @@ import 'package:flutter/material.dart';
 // }}
 
 class CustomButton extends StatelessWidget {
-   Map<String,dynamic> color;
-   CustomButton({required this.color});
+   AnswerModelQuis answerModel;
+   VoidCallback counter;
+   VoidCallback score;
+   CustomButton({required this.answerModel, required this.counter, required this.score});
   
   @override
   Widget build(BuildContext context) {
     return ElevatedButton(
-      onPressed:color['onPressed'] ,
-      child: Text(color['answer']),
+      onPressed:(){
+        answerModel.onPressed;
+        counter();
+        score();
+      },
+      child: Center(child: Text(answerModel.answer)),
     );
   }
 }
