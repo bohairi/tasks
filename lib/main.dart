@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_all_applications/quis_app/first_page.dart';
 import 'package:flutter_all_applications/four/icon_page2.dart';
+import 'package:flutter_all_applications/quiz.dart/first_page_quiz.dart';
+import 'package:flutter_all_applications/quiz.dart/page_one_quiz.dart';
 import 'package:flutter_all_applications/seven/button_types.dart';
 import 'package:flutter_all_applications/seven/page1.dart';
 import 'package:flutter_all_applications/six/home_page.dart';
@@ -24,10 +26,12 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: HomePageStack(),
+      home: PageOneQuiz(),
     );
   
   }
 }
+
+
 
 

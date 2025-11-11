@@ -76,7 +76,7 @@ Widget customCircle(Color c){
     ),
   );
 }
-Widget customNumber(int data){
+Widget customNumber(int? data){
   return Container(
     decoration: BoxDecoration(
     shape: BoxShape.circle
