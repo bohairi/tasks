@@ -33,7 +33,7 @@ class FirstPageQuiz extends StatelessWidget {
                                 borderRadius: BorderRadius.only(topLeft: Radius.circular(30),topRight: Radius.circular(30))),
                                 child: GridView.builder(
                                   //  physics: NeverScrollableScrollPhysics(),
-                                  gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2),itemCount: 4, itemBuilder: (context, index) => Padding(
+                                  gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2), itemBuilder: (context, index) => Padding(
                                   padding: const EdgeInsets.all(8.0),
                                   child: Container(height: 10, width: 10, color: Colors.amber,),
                                 )),

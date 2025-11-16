@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_all_applications/navigation_leacture/navigation_Screen1.dart';
+import 'package:flutter_all_applications/navigation_leacture/navigation_Screen2.dart';
+import 'package:flutter_all_applications/navigation_leacture/navigation_Screen3.dart';
 import 'package:flutter_all_applications/quis_app/first_page.dart';
 import 'package:flutter_all_applications/four/icon_page2.dart';
 import 'package:flutter_all_applications/quiz.dart/first_page_quiz.dart';
@@ -7,6 +10,7 @@ import 'package:flutter_all_applications/seven/button_types.dart';
 import 'package:flutter_all_applications/seven/page1.dart';
 import 'package:flutter_all_applications/six/home_page.dart';
 import 'package:flutter_all_applications/stack_UI_task/home_page_stack.dart';
+import 'package:flutter_all_applications/textField%20leacture/text_field_page1.dart';
 import 'package:flutter_all_applications/views/grid_view_adv.dart';
 import 'package:flutter_all_applications/views/grid_view_class.dart';
 import 'package:flutter_all_applications/views/leason_list_view.dart';
@@ -26,7 +30,12 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: PageOneQuiz(),
+      home: TextFieldPage1(),
+      routes: {
+        'routScreen2' : (context) => NavigationScreen2(),
+        'routScreen1' : (context) => NavigationScreen1(),
+        'routScreen3' : (context) => NavigationScreen3()
+      },
     );
   
   }
