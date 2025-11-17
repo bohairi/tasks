@@ -55,7 +55,7 @@ class _TextFieldPage1State extends State<TextFieldPage1> {
                 helper: Text('write email'),
                 prefixIcon: Icon(Icons.email),
                 icon: Icon(Icons.home),
-                suffixIcon: Icon(Icons.person)
+                suffixIcon: Icon(Icons.person),
               ),
             ),
             SizedBox(height: 8,),
