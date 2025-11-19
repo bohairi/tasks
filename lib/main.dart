@@ -10,6 +10,7 @@ import 'package:flutter_all_applications/seven/button_types.dart';
 import 'package:flutter_all_applications/seven/page1.dart';
 import 'package:flutter_all_applications/six/home_page.dart';
 import 'package:flutter_all_applications/stack_UI_task/home_page_stack.dart';
+import 'package:flutter_all_applications/task_burgar/Screens/utils/splash.dart';
 import 'package:flutter_all_applications/textField%20leacture/text_field_page1.dart';
 import 'package:flutter_all_applications/text_field_task/register_page_task1.dart';
 import 'package:flutter_all_applications/views/grid_view_adv.dart';
@@ -31,7 +32,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: RegisterPageTask1(),
+      home: Splash(),
       routes: {
         'routScreen2' : (context) => NavigationScreen2(),
         'routScreen1' : (context) => NavigationScreen1(),
