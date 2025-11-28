@@ -62,7 +62,8 @@ flutter:
     - assets/deliver.jpg
     - assets/hijab.jpeg
     - assets/sweater.webp
-    - assets/image/
+    - assets/image/burger.png
+    - assets/image/double_chease_burger.webp
   #   - images/a_dot_burr.jpeg
   #   - images/a_dot_ham.jpeg
 
