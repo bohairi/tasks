@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_all_applications/quiz.dart/page_one_quiz.dart';
 import 'package:flutter_all_applications/text_field_task/costum_textfiled_task.dart';
+import 'package:flutter_all_applications/text_field_task/gradiant_color_task.dart';
 import 'package:flutter_all_applications/text_field_task/home_page_task.dart';
 
 class RegisterPageTask1 extends StatefulWidget {
@@ -50,55 +51,63 @@ class _RegisterPageTask1State extends State<RegisterPageTask1> {
     ,controller: twicePassword,isSecure: !isopen,lable: "Confirm",),
   ];
     return Scaffold(
-      body: SafeArea(
-        child: Center(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            children: [
-              CircleAvatar(
-                backgroundImage:AssetImage("assets/hijab.jpeg"),radius: 50,
-              ),
-              Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: Form(
-                  key: _formkey,
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                    children: editText.map((c) {
-                      return (c == editText[2] && hidefield == true)? SizedBox() : c ;
-                    }).toList()
+      body: Container(
+        decoration: BoxDecoration(
+          gradient: LinearGradient(
+            begin: Alignment.topCenter,
+            end: Alignment.bottomCenter,
+            colors: GradiantColorTask.gradaintColor)
+        ),
+        child: SafeArea(
+          child: Center(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                CircleAvatar(
+                  backgroundImage:AssetImage("assets/hijab.jpeg"),radius: 50,
+                ),
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Form(
+                    key: _formkey,
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      children: editText.map((c) {
+                        return (c == editText[2] && hidefield == true)? SizedBox() : c ;
+                      }).toList()
+                    ),
                   ),
                 ),
-              ),
-              SizedBox(height: 5),
-              ElevatedButton(
-                onPressed: () {
-                  if(buttonText == 'Login'){
-                    if(check_email == email.text && check_password == password.text){
-                      Navigator.of(context).push(MaterialPageRoute(builder: (_)=> HomePageTask()));
+                SizedBox(height: 5),
+                ElevatedButton(
+                  onPressed: () {
+                    if(buttonText == 'Login'){
+                      if(check_email == email.text && check_password == password.text){
+                        Navigator.of(context).push(MaterialPageRoute(builder: (_)=> HomePageTask()));
+                      }
+                    };
+                    if(_formkey.currentState!.validate()){
+                      check_email = email.text;
+                      check_password = password.text;
+                      check_twicePassword = twicePassword.text;
+                      setState(() {
+                        hidefield = true;
+                        buttonText = 'Login';
+                        password.clear();
+                        email.clear();
+                      });
                     }
-                  };
-                  if(_formkey.currentState!.validate()){
-                    check_email = email.text;
-                    check_password = password.text;
-                    check_twicePassword = twicePassword.text;
-                    setState(() {
-                      hidefield = true;
-                      buttonText = 'Login';
-                      password.clear();
-                      email.clear();
-                    });
-                  }
-                  else {
-                    ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text("register field")));
-                  }
-                },
-                child: Text(
-                  buttonText,
-                  style: TextStyle(fontWeight: FontWeight.bold, fontSize: 15),
+                    else {
+                      ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text("register field")));
+                    }
+                  },
+                  child: Text(
+                    buttonText,
+                    style: TextStyle(fontWeight: FontWeight.bold, fontSize: 15),
+                  ),
                 ),
-              ),
-            ],
+              ],
+            ),
           ),
         ),
       ),

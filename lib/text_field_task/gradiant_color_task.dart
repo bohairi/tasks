@@ -3,11 +3,11 @@ import 'package:flutter/material.dart';
 class GradiantColorTask {
 
 static List <Color> gradaintColor = [
-  Colors.yellow.shade100,
-  Colors.yellow.shade200,
-  Colors.yellow.shade300,
-  Colors.yellow.shade400,
-  Colors.yellow.shade500,
-  Colors.yellow.shade600,
+  Colors.purple.shade100,
+  Colors.purple.shade200,
+  Colors.purple.shade300,
+  Colors.purple.shade400,
+  Colors.purple.shade500,
+  Colors.purple.shade600,
 ];
 }

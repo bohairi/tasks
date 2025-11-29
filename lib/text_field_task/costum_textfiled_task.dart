@@ -24,6 +24,8 @@ class CostumTextfiledTask extends StatelessWidget{
         //   return null;
         // },
       decoration: InputDecoration(
+        filled: true,
+        fillColor: Colors.white,
         prefixIcon: icon,
         hintText: hinttext,
         labelText: lable,

@@ -45,32 +45,52 @@ class HomePageTask extends StatelessWidget {
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
-                  Container(
-                    height: 45,
+                   SizedBox(
                     width: MediaQuery.of(context).size.width * 0.7,
-                    decoration: BoxDecoration(
-                      color: Colors.white,
+                    height: 50,
+                     child: Material(
+                      shadowColor: Colors.grey,
+                      elevation: 5,
                       borderRadius: BorderRadius.circular(20),
-                      boxShadow: [
-                        BoxShadow(
-                          color: Colors.grey,
-                          blurRadius: 2,
-                          spreadRadius: 1,
-                          offset: Offset(0, 3)
-                        )
-                      ]
-                    ),
-                    child: TextField(
-                      decoration: InputDecoration(
-                        prefixIcon: Icon(Icons.search,size: 30,),
-                        hintText: "Search",
-                        // labelText: "Search",
-                        border: OutlineInputBorder(
-                          borderSide: BorderSide.none
-                        )
-                      ),
-                    ),
-                  ),
+                      color: Colors.white,
+                       child: TextField(
+                           decoration: InputDecoration(
+                             prefixIcon: Icon(Icons.search,size: 30,),
+                             hintText: "Search",
+                             // labelText: "Search",
+                             border: OutlineInputBorder(
+                               borderSide: BorderSide.none
+                             )
+                           ),
+                         ),
+                     ),
+                   ),
+                  // Container(
+                  //   height: 45,
+                  //   width: MediaQuery.of(context).size.width * 0.7,
+                  //   decoration: BoxDecoration(
+                  //     color: Colors.white,
+                  //     borderRadius: BorderRadius.circular(20),
+                  //     boxShadow: [
+                  //       BoxShadow(
+                  //         color: Colors.grey,
+                  //         blurRadius: 2,
+                  //         spreadRadius: 1,
+                  //         offset: Offset(0, 3)
+                  //       )
+                  //     ]
+                  //   ),
+                  //   child: TextField(
+                  //     decoration: InputDecoration(
+                  //       prefixIcon: Icon(Icons.search,size: 30,),
+                  //       hintText: "Search",
+                  //       // labelText: "Search",
+                  //       border: OutlineInputBorder(
+                  //         borderSide: BorderSide.none
+                  //       )
+                  //     ),
+                  //   ),
+                  // ),
                   Container(
                     width: 45,
                     height: 45,
